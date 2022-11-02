@@ -63,6 +63,11 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
             to,
             deadline
         );
+
+        //exactOut can use amounts less than amountInMax. So transfer the excess funds back
+        if(sourceToken.balanceOf(address(this)) > 0) {
+            sourceToken.safeTransfer(_msgSender(), sourceToken.balanceOf(address(this)));
+        }
     }
 
     function setRouter(IUniswapV2Router02 _router) external onlyOwner {
