@@ -65,8 +65,9 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         );
 
         //exactOut can use amounts less than amountInMax. So transfer the excess funds back
-        if(sourceToken.balanceOf(address(this)) > 0) {
-            sourceToken.safeTransfer(_msgSender(), sourceToken.balanceOf(address(this)));
+        uint256 excess = sourceToken.balanceOf(address(this));
+        if(excess > 0) {
+            sourceToken.safeTransfer(_msgSender(), excess);
         }
     }
 
