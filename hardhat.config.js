@@ -43,7 +43,32 @@ module.exports = {
     goerli: {
       url: process.env.RPC_GOERLI,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
-    }
+    },
+
+    "arbitrum-goerli" : {
+      url: process.env.RPC_ARBITRUM_GOERLI,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    "maticmum": { //polygon testnet
+      url: process.env.RPC_MUMBAI,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    fuji: { //avalanche testnet
+      url: process.env.RPC_FUJI,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    bnbt: {
+      url: process.env.RPC_BSC_TESTNET,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    optimismGoerli: {
+      url: process.env.RPC_OPTIMISM_GOERLI,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    optimism: {
+      url: process.env.RPC_OPTIMISM,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
   },
 
   solidity: "0.8.13",
@@ -53,7 +78,29 @@ module.exports = {
   },
 
   etherscan: {
-    apiKey: process.env.ETHERSCAN_KEY
+    apiKey: {
+      polygon: process.env.POLYGONSCAN_KEY,
+      bsc: process.env.BSCSCAN_KEY,
+      arbitrumOne: process.env.ARBISCAN_KEY,
+      avalanche: process.env.AVAX_KEY,
+      mainnet: process.env.ETHERSCAN_KEY,
+
+      polygonMumbai: process.env.POLYGONSCAN_KEY,
+      arbitrumTestnet: process.env.ARBISCAN_KEY,
+      avalancheFujiTestnet: process.env.AVAX_KEY,
+      goerli: process.env.ETHERSCAN_KEY,
+      customChains: [
+        {
+          network: "arbitrumTestnet",
+          chainId: 421613,
+          urls: {
+            apiURL: "https://api-goerli.arbiscan.io/api",
+            browserURL: "https://goerli.arbiscan.io"
+          }
+        }
+      ]
+    }
+
   }
 
 };
