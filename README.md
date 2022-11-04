@@ -34,10 +34,5 @@
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | [0x5b51f14cB3Dbbd5F9325FB9Ecc57D9a8fF3A440D](https://snowtrace.io/address/0x5b51f14cb3dbbd5f9325fb9ecc57d9a8ff3a440d) | 
-| Forwarder         | [#### Avalanche
-
-| Name              | Mainnet                                                                             | Testnet
-|-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
 | Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://arbiscan.io/address/0x68b7b9d45d70496b9c0e449ad82c4fda3ad8afd5) | 
 | Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://arbiscan.io/address/0x981ae6155f8cf24f67e30ca8d90ab6faeb472ae5) |
