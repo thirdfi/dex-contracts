@@ -10,7 +10,7 @@ module.exports = {
     },
     polygon: { //POLYGON
         routerAddr: "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff", //quickswap
-        trustedForwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD"
+        trustedForwarder: "0x86c80a8aa58e0a4fa09a69624c31ab2a6cad56b8"
     },
     avalanche: { //AVALANCHE
         routerAddr: "0x60aE616a2155Ee3d9A68541Ba4544862310933d4", //traderJoe
