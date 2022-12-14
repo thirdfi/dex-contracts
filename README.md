@@ -6,8 +6,8 @@
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | [0x8F48b71ac3B083106dD8907E97eC80f8eFfDC622](https://etherscan.io/address/0x8f48b71ac3b083106dd8907e97ec80f8effdc622) | 
-| Forwarder         | [0x14EE436f26D9d052A0E52368536A9AaFc36541c2](https://etherscan.io/address/0x14ee436f26d9d052a0e52368536a9aafc36541c2) |
+| Proxy Admin       | [0x8F48b71ac3B083106dD8907E97eC80f8eFfDC622](https://etherscan.io/address/0x8f48b71ac3b083106dd8907e97ec80f8effdc622) | [0xd98114d075158b2b8c7178118a0dcfdcd6b4fcf7](https://goerli.etherscan.io/address/0xd98114d075158b2b8c7178118a0dcfdcd6b4fcf7#readContract)
+| Forwarder         | [0x14EE436f26D9d052A0E52368536A9AaFc36541c2](https://etherscan.io/address/0x14ee436f26d9d052a0e52368536a9aafc36541c2) | [0x03480A05c6CD9880c3B4dd664D7d49f7b45cF177](https://goerli.etherscan.io/address/0x03480A05c6CD9880c3B4dd664D7d49f7b45cF177#readProxyContract)
 
 #### BNB Chain
 
