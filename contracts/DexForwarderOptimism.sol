@@ -5,17 +5,20 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "./interfaces/IFactoryVelodrome.sol";
 
 contract DexForwarderOptimism is Initializable, OwnableUpgradeable {
     using SafeERC20Upgradeable for IERC20Upgradeable;
 
     IRouterVelodrome public router;
     address public trustedForwarder;
+    IFactory public factory;
 
     function initialize(IRouterVelodrome _router, address _trustedForwarder) external initializer {
         __Ownable_init();
         router = _router;
         trustedForwarder = _trustedForwarder;
+        factory = IFactory(_router.factory());
     }
 
     function swapExactTokensForTokens(
@@ -37,6 +40,84 @@ contract DexForwarderOptimism is Initializable, OwnableUpgradeable {
             amountIn,
             amountOutMin,
             route,
+            to,
+            deadline
+        );
+    }
+
+    function addLiquidity(
+        IERC20Upgradeable tokenA,
+        IERC20Upgradeable tokenB,
+        bool stable,
+        uint256 amountADesired,
+        uint256 amountBDesired,
+        uint256 amountAMin,
+        uint256 amountBMin,
+        address to,
+        uint256 deadline
+    ) external  returns (uint256 amountA, uint256 amountB, uint256 liquidity) {
+        tokenA.safeTransferFrom(_msgSender(), address(this), amountADesired);
+        tokenB.safeTransferFrom(_msgSender(), address(this), amountBDesired);
+
+
+        if (tokenA.allowance(address(this), address(router)) < amountADesired) {
+            tokenA.safeApprove(address(router), type(uint256).max);
+        }
+
+        if (tokenB.allowance(address(this), address(router)) < amountBDesired) {
+            tokenB.safeApprove(address(router), type(uint256).max);
+        }
+
+        (amountA, amountB, liquidity) = router.addLiquidity(
+            address(tokenA),
+            address(tokenB),
+            stable,
+            amountADesired,
+            amountBDesired,
+            amountAMin,
+            amountBMin,
+            to,
+            deadline
+        );
+
+        //transfer the excess funds back
+        uint256 excessA = amountADesired - amountA; // tokenA.balanceOf(address(this));
+        if(excessA > 0) {
+            tokenA.safeTransfer(_msgSender(), excessA);
+        }
+
+        uint256 excessB = amountBDesired - amountB; //tokenB.balanceOf(address(this));
+        if(excessB > 0) {
+            tokenB.safeTransfer(_msgSender(), excessB);
+        }
+    }
+
+    function removeLiquidity(
+        IERC20Upgradeable tokenA,
+        IERC20Upgradeable tokenB,
+        bool stable,
+        uint256 liquidity,
+        uint256 amountAMin,
+        uint256 amountBMin,
+        address to,
+        uint256 deadline
+    ) external returns (uint256 amountA, uint256 amountB) {
+
+        IERC20Upgradeable lpToken = IERC20Upgradeable(factory.getPair(address(tokenA), address(tokenB), stable));
+
+        if(lpToken.allowance(address(this), address(router)) < liquidity) {
+            lpToken.safeApprove(address(router), type(uint256).max);
+        }
+
+        lpToken.safeTransferFrom(_msgSender(), address(this), liquidity);
+        
+        (amountA, amountB) = router.removeLiquidity(
+            address(tokenA),
+            address(tokenB),
+            stable,
+            liquidity,
+            amountAMin,
+            amountBMin,
             to,
             deadline
         );
@@ -69,5 +150,9 @@ contract DexForwarderOptimism is Initializable, OwnableUpgradeable {
 
     function versionRecipient() external pure returns (string memory) {
         return "1";
+    }
+
+    function postUpgrade() external {
+        factory = IFactory(router.factory());
     }
 }
