@@ -10,7 +10,7 @@ module.exports = {
         trustedForwarder: "0x86C80a8aa58e0A4fa09A69624c31Ab2a6CAD56b8",
         Proxy: "0x013B7E3D393DCE5fDb8C2F7890419cbd8ca8F7EE",
     },
-    polygon: { //POLYGON
+    matic: { //POLYGON
         routerAddr: "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff", //quickswap
         trustedForwarder: "0x86c80a8aa58e0a4fa09a69624c31ab2a6cad56b8",
         Proxy: "0xF2b9a3aE5B765556f2e2934173CB1F957c8ED50B",
