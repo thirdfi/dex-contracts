@@ -84,6 +84,7 @@ module.exports = {
       arbitrumOne: process.env.ARBISCAN_KEY,
       avalanche: process.env.AVAX_KEY,
       mainnet: process.env.ETHERSCAN_KEY,
+      optimisticEthereum: process.env.OPTIMISM_KEY,
 
       polygonMumbai: process.env.POLYGONSCAN_KEY,
       arbitrumTestnet: process.env.ARBISCAN_KEY,
