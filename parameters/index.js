@@ -59,6 +59,6 @@ module.exports = {
     optimism: {
         routerAddr: "0x9c12939390052919aF3155f41Bf4160Fd3666A6f", //velodrome
         trustedForwarder: "0xefba8a2a82ec1fb1273806174f5e28fbb917cf95",
-        Proxy: "",
+        Proxy: "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
     },
 }
