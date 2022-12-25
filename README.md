@@ -41,4 +41,5 @@
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
+| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://optimistic.etherscan.io/address/0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5) | 
 | Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://optimistic.etherscan.io/address/0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5) |
