@@ -1,4 +1,4 @@
-## Securo Biconomy Forwarders
+## Securo DeX integrated with Biconomy Forwarders
 
 ### Contract Addresses
 
