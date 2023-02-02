@@ -1,4 +1,4 @@
-## Securo Biconomy Forwarders
+## Securo DeX integrated with Biconomy Forwarders
 
 ### Contract Addresses
 
@@ -36,3 +36,10 @@
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
 | Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://arbiscan.io/address/0x68b7b9d45d70496b9c0e449ad82c4fda3ad8afd5) | 
 | Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://arbiscan.io/address/0x981ae6155f8cf24f67e30ca8d90ab6faeb472ae5) |
+
+#### Optimism
+
+| Name              | Mainnet                                                                             | Testnet
+|-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
+| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://optimistic.etherscan.io/address/0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5) | 
+| Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://optimistic.etherscan.io/address/0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5) |

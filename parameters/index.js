@@ -10,7 +10,7 @@ module.exports = {
         trustedForwarder: "0x86C80a8aa58e0A4fa09A69624c31Ab2a6CAD56b8",
         Proxy: "0x013B7E3D393DCE5fDb8C2F7890419cbd8ca8F7EE",
     },
-    polygon: { //POLYGON
+    matic: { //POLYGON
         routerAddr: "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff", //quickswap
         trustedForwarder: "0x86c80a8aa58e0a4fa09a69624c31ab2a6cad56b8",
         Proxy: "0xF2b9a3aE5B765556f2e2934173CB1F957c8ED50B",
@@ -59,6 +59,6 @@ module.exports = {
     optimism: {
         routerAddr: "0x9c12939390052919aF3155f41Bf4160Fd3666A6f", //velodrome
         trustedForwarder: "0xefba8a2a82ec1fb1273806174f5e28fbb917cf95",
-        Proxy: "",
+        Proxy: "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
     },
 }

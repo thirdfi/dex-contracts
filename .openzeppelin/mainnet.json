@@ -1,20 +1,20 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5",
-    "txHash": "0x3a6b045dcc2fb2301371102025d2f1e2cebc5d181f781be30470c429af57e4a3"
+    "address": "0x8F48b71ac3B083106dD8907E97eC80f8eFfDC622",
+    "txHash": "0x8b02459ad95bec40773b43bdf44a39f93e3f1bb1c91d9ef7c9e179c3cb09e63f"
   },
   "proxies": [
     {
-      "address": "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
-      "txHash": "0x4b5abb6f173b2ab2dabcb5eeea4185679893dba365f96e261ed11f256dc4402d",
+      "address": "0x14EE436f26D9d052A0E52368536A9AaFc36541c2",
+      "txHash": "0x290a0bc889b5d451440c1190a8a7250a7f29aefd98f79ea6139c9f7c5b850a7b",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "1411b2202d5a6aace0b1eb643fbac83b2aeaf137b2a02a1b1afe979d9ac822ba": {
-      "address": "0xE0245d079295246e570894ec6014713ED276efF3",
-      "txHash": "0xecfe11b441f2ad6a62e45942e89f99358ddb22b36da08257b73ba4ff33f4d4b8",
+    "d424822cee5da428dde3d06a7a25ff789071fc63efa249df7f7034b95abee5a5": {
+      "address": "0xd3610688177bfAfb6e95294495e314f8B3423242",
+      "txHash": "0xbc59d9fee80f6d761d0f3fe4786e75fbe88b4aca45babcd757f29e8afde5810d",
       "layout": {
         "solcVersion": "0.8.13",
         "storage": [
@@ -63,17 +63,17 @@
             "label": "router",
             "offset": 0,
             "slot": "101",
-            "type": "t_contract(IRouterVelodrome)1242",
-            "contract": "DexForwarderOptimism",
-            "src": "contracts/DexForwarderOptimism.sol:12"
+            "type": "t_contract(IUniswapV2Router02)1710",
+            "contract": "DexForwarder",
+            "src": "contracts/dex.sol:12"
           },
           {
             "label": "trustedForwarder",
             "offset": 0,
             "slot": "102",
             "type": "t_address",
-            "contract": "DexForwarderOptimism",
-            "src": "contracts/DexForwarderOptimism.sol:13"
+            "contract": "DexForwarder",
+            "src": "contracts/dex.sol:13"
           }
         ],
         "types": {
@@ -93,8 +93,8 @@
             "label": "bool",
             "numberOfBytes": "1"
           },
-          "t_contract(IRouterVelodrome)1242": {
-            "label": "contract IRouterVelodrome",
+          "t_contract(IUniswapV2Router02)1710": {
+            "label": "contract IUniswapV2Router02",
             "numberOfBytes": "20"
           },
           "t_uint256": {
@@ -108,9 +108,9 @@
         }
       }
     },
-    "ec1c153308169c65f1cd5d4786a8bf1c213f233750c2d038abf41171d2cc0c47": {
-      "address": "0xdac6E0CD7A535038f5d836155784603FaC1ba23d",
-      "txHash": "0x917451f9a1ba867a22a673560f3385ac6a342ab77e6e1c40b1dddfb29fe91475",
+    "61c6011b39dd8b6b556959428b67bbc29aabe2cdf915e7db4cf3defce55e952c": {
+      "address": "0x2cbd4688d5abEc1A3C69e97A2650f0d9c0Ab4E40",
+      "txHash": "0xabb67fa8b19cce72c6e56e18a69d12984f508bae5d693b0c131ea520ce03be21",
       "layout": {
         "solcVersion": "0.8.13",
         "storage": [
@@ -159,25 +159,25 @@
             "label": "router",
             "offset": 0,
             "slot": "101",
-            "type": "t_contract(IRouterVelodrome)2263",
-            "contract": "DexForwarderOptimism",
-            "src": "contracts/DexForwarderOptimism.sol:13"
+            "type": "t_contract(IUniswapV2Router02)2020",
+            "contract": "DexForwarder",
+            "src": "contracts/dex.sol:13"
           },
           {
             "label": "trustedForwarder",
             "offset": 0,
             "slot": "102",
             "type": "t_address",
-            "contract": "DexForwarderOptimism",
-            "src": "contracts/DexForwarderOptimism.sol:14"
+            "contract": "DexForwarder",
+            "src": "contracts/dex.sol:14"
           },
           {
             "label": "factory",
             "offset": 0,
             "slot": "103",
-            "type": "t_contract(IFactory)2136",
-            "contract": "DexForwarderOptimism",
-            "src": "contracts/DexForwarderOptimism.sol:15"
+            "type": "t_contract(IFactory)1624",
+            "contract": "DexForwarder",
+            "src": "contracts/dex.sol:15"
           }
         ],
         "types": {
@@ -197,12 +197,12 @@
             "label": "bool",
             "numberOfBytes": "1"
           },
-          "t_contract(IFactory)2136": {
+          "t_contract(IFactory)1624": {
             "label": "contract IFactory",
             "numberOfBytes": "20"
           },
-          "t_contract(IRouterVelodrome)2263": {
-            "label": "contract IRouterVelodrome",
+          "t_contract(IUniswapV2Router02)2020": {
+            "label": "contract IUniswapV2Router02",
             "numberOfBytes": "20"
           },
           "t_uint256": {

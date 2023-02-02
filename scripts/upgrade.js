@@ -17,10 +17,10 @@ const main = async () => {
     }
 
     let proxyAddr
-    let nativeToken
     if (net.chainId == 43113) {
         proxyAddr = params.fuji.Proxy
-        nativeToken = params.fuji.nativeToken
+    } else if (net.chainId === 43114) {
+        proxyAddr = params.avalanche.Proxy
     } else {
         let networkName = net.name == "homestead" ? "ethereum" : net.name
         proxyAddr = params[networkName].Proxy
