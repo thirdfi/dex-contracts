@@ -81,25 +81,26 @@ module.exports = {
     apiKey: {
       polygon: process.env.POLYGONSCAN_KEY,
       bsc: process.env.BSCSCAN_KEY,
+      bscTestnet: process.env.BSC_TESTNET_KEY,
       arbitrumOne: process.env.ARBISCAN_KEY,
       avalanche: process.env.AVAX_KEY,
       mainnet: process.env.ETHERSCAN_KEY,
-
+      optimisticGoerli: process.env.OPTIMISM_KEY,
       polygonMumbai: process.env.POLYGONSCAN_KEY,
-      arbitrumTestnet: process.env.ARBISCAN_KEY,
+      "arbitrum-goerli": process.env.ARBISCAN_KEY,
       avalancheFujiTestnet: process.env.AVAX_KEY,
       goerli: process.env.ETHERSCAN_KEY,
-      customChains: [
-        {
-          network: "arbitrumTestnet",
-          chainId: 421613,
-          urls: {
-            apiURL: "https://api-goerli.arbiscan.io/api",
-            browserURL: "https://goerli.arbiscan.io"
-          }
+    },
+    customChains: [
+      {
+        network: "arbitrum-goerli",
+        chainId: 421613,
+        urls: {
+          apiURL: "https://api-goerli.arbiscan.io/api",
+          browserURL: "https://goerli.arbiscan.io"
         }
-      ]
-    }
+      }
+    ]
 
   }
 

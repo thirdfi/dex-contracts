@@ -41,4 +41,29 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
         address to,
         uint deadline
     ) external;
+
+    function swapExactAVAXForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
+        external
+        payable
+    returns (uint[] memory amounts);
+
+    function addLiquidityAVAX(
+        address token,
+        uint amountTokenDesired,
+        uint amountTokenMin,
+        uint amountAVAXMin,
+        address to,
+        uint deadline
+    ) external payable returns (uint amountToken, uint amountAVAX, uint liquidity);
+
+    function removeLiquidityAVAX(
+        address token,
+        uint liquidity,
+        uint amountTokenMin,
+        uint amountAVAXMin,
+        address to,
+        uint deadline
+    ) external returns (uint amountToken, uint amountAVAX);
+
+    function WAVAX() external view returns(address);
 }

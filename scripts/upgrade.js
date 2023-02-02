@@ -10,24 +10,37 @@ const main = async () => {
     let DexForwarder
     if (net.chainId == 420 || net.chainId == 10) { //optimism and optimism goerli
         DexForwarder = await ethers.getContractFactory("DexForwarderOptimism", deployer)
-    } else {
+    } else if (net.chainId == 43113 || net.chainId == 43114) {
+        DexForwarder = await ethers.getContractFactory("DexForwarderAvalanche", deployer)
+    }else {
         DexForwarder = await ethers.getContractFactory("DexForwarder", deployer)
     }
 
     let proxyAddr
-
+    let nativeToken
     if (net.chainId == 43113) {
         proxyAddr = params.fuji.Proxy
+        nativeToken = params.fuji.nativeToken
     } else {
         let networkName = net.name == "homestead" ? "ethereum" : net.name
         proxyAddr = params[networkName].Proxy
+        nativeToken = params[networkName].nativeToken
     }
+    // console.log("force importing")
+    // await upgrades.forceImport(
+    //     "0xb43d4A02aFddFA9c4a9075eEcacea0a60c32C4f4",
+    //     await ethers.getContractFactory("DexForwarderOptimismOld")
+    // )
+
     console.log("Upgrading Proxy:", proxyAddr)
     let proxy = await upgrades.upgradeProxy(
         proxyAddr,
         DexForwarder,
         {
-            call: "postUpgrade"
+            call: {
+                fn: "postUpgrade",
+        
+            }
         }
     )
 
