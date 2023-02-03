@@ -223,7 +223,7 @@ contract DexForwarderAvalanche is Initializable, OwnableUpgradeable {
             token.safeApprove(address(router), type(uint256).max);
         }
 
-        (amountA, amountB, liquidity) = router.addLiquidityAVAX(address(token), amounts[1], amounts[1] * 95_00 / 100_00, amounts[0] * 95_00 / 100_00, _sender, block.timestamp);
+        (amountA, amountB, liquidity) = router.addLiquidityAVAX{value: amounts[0]}(address(token), amounts[1], amounts[1] * 95_00 / 100_00, amounts[0] * 95_00 / 100_00, _sender, block.timestamp);
         uint256 excess = address(this).balance;
         if(excess > 0 ) {
             payable(_sender).transfer(excess);
