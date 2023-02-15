@@ -176,7 +176,15 @@ contract DexForwarderOptimism is Initializable, OwnableUpgradeable {
             tokenB.safeApprove(address(router), type(uint256).max);
         }
 
-        (_amountA, _amountB, _liquidity) = _addLiquidity(tokenA, tokenB, stable, amounts[0], amounts[1], amounts[0] * 95_00 / 100_00, 0, _sender, block.timestamp);
+        (_amountA, _amountB,) = router.quoteAddLiquidity(
+            address(tokenA), address(tokenB), stable, amounts[0], amounts[1]
+        );
+
+        (_amountA, _amountB, _liquidity) = _addLiquidity(
+            tokenA, tokenB, stable, amounts[0], amounts[1], _amountA, _amountB, _sender, block.timestamp
+        );
+
+        // (_amountA, _amountB, _liquidity) = _addLiquidity(tokenA, tokenB, stable, amounts[0], amounts[1], amounts[0] * amountAPerc / 100_00, amounts[1] * amountBPerc / 100_00, _sender, block.timestamp);
         emit AddLiquidity(address(tokenA), address(tokenB), _sender, amounts[0], amounts[1]);
     }
 

@@ -30,4 +30,11 @@ interface IRouterVelodrome {
     returns (uint[] memory amounts);
 
     function weth() external view returns (address);
+    function quoteAddLiquidity(
+        address tokenA,
+        address tokenB,
+        bool stable,
+        uint amountADesired,
+        uint amountBDesired
+    ) external view returns (uint amountA, uint amountB, uint liquidity) ;
 }
