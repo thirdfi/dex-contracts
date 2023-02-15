@@ -13,33 +13,33 @@
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | [0x21e94C1D400731A501880b4BD30c3501046439c9](https://bscscan.com/address/0x21e94c1d400731a501880b4bd30c3501046439c9) | 
-| Forwarder         | [0x013B7E3D393DCE5fDb8C2F7890419cbd8ca8F7EE](https://bscscan.com/address/0x013b7e3d393dce5fdb8c2f7890419cbd8ca8f7ee) |
+| Proxy Admin       | [0x21e94C1D400731A501880b4BD30c3501046439c9](https://bscscan.com/address/0x21e94c1d400731a501880b4bd30c3501046439c9) | [0xdb55c5e54d40e8e53182a7c7dcb7bdd45356b567](https://testnet.bscscan.com/address/0xdb55c5e54d40e8e53182a7c7dcb7bdd45356b567)
+| Forwarder         | [0x013B7E3D393DCE5fDb8C2F7890419cbd8ca8F7EE](https://bscscan.com/address/0x013b7e3d393dce5fdb8c2f7890419cbd8ca8f7ee) | [0x1a45939d2cd21f2fde107b0628e7848bc0661459](https://testnet.bscscan.com/address/0x1a45939d2cd21f2fde107b0628e7848bc0661459#readProxyContract)
 
 #### Polygon
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | [0x3e3505b209855522899e0a046F83e6E0C5c2206b](https://polygonscan.com/address/0x3e3505b209855522899e0a046f83e6e0c5c2206b) | 
-| Forwarder         | [0xF2b9a3aE5B765556f2e2934173CB1F957c8ED50B](https://polygonscan.com/address/0xf2b9a3ae5b765556f2e2934173cb1f957c8ed50b) |
+| Proxy Admin       | [0x3e3505b209855522899e0a046F83e6E0C5c2206b](https://polygonscan.com/address/0x3e3505b209855522899e0a046f83e6e0c5c2206b) | [0x38c352bbc0db6e6bba8bca211bf651180c7801e6](https://mumbai.polygonscan.com/address/0x38c352bbc0db6e6bba8bca211bf651180c7801e6)
+| Forwarder         | [0xF2b9a3aE5B765556f2e2934173CB1F957c8ED50B](https://polygonscan.com/address/0xf2b9a3ae5b765556f2e2934173cb1f957c8ed50b) | [0x477b15afa64ba3ae52426215ab8407d176344719](https://mumbai.polygonscan.com/address/0x477b15afa64ba3ae52426215ab8407d176344719#readProxyContract)
 
 #### Avalanche
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | [0x5b51f14cB3Dbbd5F9325FB9Ecc57D9a8fF3A440D](https://snowtrace.io/address/0x5b51f14cb3dbbd5f9325fb9ecc57d9a8ff3a440d) | 
-| Forwarder         | [0x4bC80867F578b0d9202f20B55563F9284267c4df](https://snowtrace.io/address/0x4bc80867f578b0d9202f20b55563f9284267c4df) |
+| Proxy Admin       | [0x5b51f14cB3Dbbd5F9325FB9Ecc57D9a8fF3A440D](https://snowtrace.io/address/0x5b51f14cb3dbbd5f9325fb9ecc57d9a8ff3a440d) | [0xc26ff53b16097cdd77106358730383f628275e75](https://testnet.snowtrace.io/address/0xc26ff53b16097cdd77106358730383f628275e75)
+| Forwarder         | [0x4bC80867F578b0d9202f20B55563F9284267c4df](https://snowtrace.io/address/0x4bc80867f578b0d9202f20b55563f9284267c4df) | [0x740Cc6f58fAA7ddE3337215a996610858E76f1b0](https://testnet.snowtrace.io/address/0x740Cc6f58fAA7ddE3337215a996610858E76f1b0#readProxyContract)
 
 #### Arbitrum
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://arbiscan.io/address/0x68b7b9d45d70496b9c0e449ad82c4fda3ad8afd5) | 
-| Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://arbiscan.io/address/0x981ae6155f8cf24f67e30ca8d90ab6faeb472ae5) |
+| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://arbiscan.io/address/0x68b7b9d45d70496b9c0e449ad82c4fda3ad8afd5) | [0xbf1d14a1a5ac7a3d556f1161ce972a1caf0301f3](https://goerli.arbiscan.io/address/0xbf1d14a1a5ac7a3d556f1161ce972a1caf0301f3)
+| Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://arbiscan.io/address/0x981ae6155f8cf24f67e30ca8d90ab6faeb472ae5) | [0xa11Fc6C77b537Db9aD61e898D7CEaeB22c1ACbB1](https://goerli.arbiscan.io/address/0xa11Fc6C77b537Db9aD61e898D7CEaeB22c1ACbB1#readProxyContract)
 
 #### Optimism
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://optimistic.etherscan.io/address/0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5) | 
-| Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://optimistic.etherscan.io/address/0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5) |
+| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://optimistic.etherscan.io/address/0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5) | [0xb3756cb11935921ae368654e4bd0e9ccca3308c3](https://goerli-optimism.etherscan.io/address/0xb3756cb11935921ae368654e4bd0e9ccca3308c3)
+| Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://optimistic.etherscan.io/address/0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5) | [0xE3559d04Cfd810306a1BF8F820e42e73c14901A3](https://goerli-optimism.etherscan.io/address/0xE3559d04Cfd810306a1BF8F820e42e73c14901A3#readProxyContract)
