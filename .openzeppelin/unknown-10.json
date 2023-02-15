@@ -267,7 +267,7 @@
             "label": "router",
             "offset": 0,
             "slot": "101",
-            "type": "t_contract(IRouterVelodrome)4719",
+            "type": "t_contract(IRouterVelodrome)2305",
             "contract": "DexForwarderOptimism",
             "src": "contracts/DexForwarderOptimism.sol:18"
           },
@@ -283,7 +283,7 @@
             "label": "factory",
             "offset": 0,
             "slot": "103",
-            "type": "t_contract(IFactory)4571",
+            "type": "t_contract(IFactory)2157",
             "contract": "DexForwarderOptimism",
             "src": "contracts/DexForwarderOptimism.sol:20"
           },
@@ -317,11 +317,131 @@
             "label": "contract IERC20Upgradeable",
             "numberOfBytes": "20"
           },
-          "t_contract(IFactory)4571": {
+          "t_contract(IFactory)2157": {
             "label": "contract IFactory",
             "numberOfBytes": "20"
           },
-          "t_contract(IRouterVelodrome)4719": {
+          "t_contract(IRouterVelodrome)2305": {
+            "label": "contract IRouterVelodrome",
+            "numberOfBytes": "20"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "97f81928182da81f208ad6da8b91a9bcbead75d772f2d4ec55fe316f0a557ab3": {
+      "address": "0x04DDc3281f71DC70879E312BbF759d54f514f07f",
+      "txHash": "0x17a2e8448ad012344756b960ad8e0f2dcaed018372e19dace3e27b4a04bbc2d2",
+      "layout": {
+        "solcVersion": "0.8.13",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IRouterVelodrome)2341",
+            "contract": "DexForwarderOptimism",
+            "src": "contracts/DexForwarderOptimism.sol:18"
+          },
+          {
+            "label": "trustedForwarder",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "DexForwarderOptimism",
+            "src": "contracts/DexForwarderOptimism.sol:19"
+          },
+          {
+            "label": "factory",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IFactory)2174",
+            "contract": "DexForwarderOptimism",
+            "src": "contracts/DexForwarderOptimism.sol:20"
+          },
+          {
+            "label": "nativeWrappedToken",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IERC20Upgradeable)378",
+            "contract": "DexForwarderOptimism",
+            "src": "contracts/DexForwarderOptimism.sol:21"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC20Upgradeable)378": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IFactory)2174": {
+            "label": "contract IFactory",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IRouterVelodrome)2341": {
             "label": "contract IRouterVelodrome",
             "numberOfBytes": "20"
           },
