@@ -69,6 +69,14 @@ module.exports = {
       url: process.env.RPC_OPTIMISM,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
     },
+    okc: {
+      url: process.env.RPC_OKC,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    okcTestnet: {
+      url: process.env.RPC_OKC_TESTNET,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    }
   },
 
   solidity: "0.8.13",

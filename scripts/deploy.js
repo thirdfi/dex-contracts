@@ -20,6 +20,10 @@ async function main() {
 
   if(net.chainId == 420 || net.chainId == 10){ //optimism and optimism goerli
     DexForwarder = await ethers.getContractFactory("DexForwarderOptimism", deployer)
+  } else if (net.chainId == 43113 || net.chainId == 43114) {
+    DexForwarder = await ethers.getContractFactory("DexForwarderAvalanche", deployer)
+  } else if (net.chainId == 65 || net.chainId == 66) {
+    DexForwarder = await ethers.getContractFactory("DexForwarderOKC", deployer)
   } else {
     DexForwarder = await ethers.getContractFactory("DexForwarder", deployer)
   }
@@ -27,20 +31,31 @@ async function main() {
   console.log("Deploying to network:", net.name, net.chainId)
   let routerAddress
   let trustedForwarder
+  let nativeToken
 
   if (net.chainId == 43113) { 
     routerAddress = params.fuji.routerAddr
     trustedForwarder = params.fuji.trustedForwarder
+    nativeToken = params["fuji"].nativeToken
+  } else if(net.chainId == 65) {
+    routerAddress = params.okcTestnet.routerAddr
+    trustedForwarder = params.okcTestnet.trustedForwarder
+    nativeToken = params.okcTestnet.nativeToken
+  } else if(net.chainId == 66) {
+    routerAddress = params.okc.routerAddr
+    trustedForwarder = params.okc.trustedForwarder
+    nativeToken = params.okc.nativeToken
   } else {
     let networkName = net.name == "homestead" ? "ethereum" : net.name
     routerAddress = params[networkName].routerAddr
     trustedForwarder = params[networkName].trustedForwarder
+    nativeToken = params[networkName].nativeToken
   }
 
   console.log("Deploying Impl and Proxy")
 
   const dexForwarder = await upgrades.deployProxy(DexForwarder, [
-    routerAddress, trustedForwarder
+    routerAddress, trustedForwarder, nativeToken
   ])
 
   await dexForwarder.deployed()
