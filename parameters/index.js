@@ -36,7 +36,7 @@ module.exports = {
         trustedForwarder: "0x67454E169d613a8e9BA6b06af2D267696EAaAf41",
         Proxy: "0xa11Fc6C77b537Db9aD61e898D7CEaeB22c1ACbB1",
     },
-    "maticmum" : { //polygon-testnet
+    "maticmum": { //polygon-testnet
         routerAddr: "0xb3756Cb11935921aE368654E4bd0E9ccCA3308C3",
         trustedForwarder: "0x69015912AA33720b842dCD6aC059Ed623F28d9f7",
         Proxy: "0x477b15aFA64ba3ae52426215ab8407d176344719",
@@ -61,4 +61,14 @@ module.exports = {
         trustedForwarder: "0xefba8a2a82ec1fb1273806174f5e28fbb917cf95",
         Proxy: "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
     },
+    kcc: {
+        routerAddr: "0xA58350d6dEE8441aa42754346860E3545cc83cdA", //kuswap
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        nativeWrappedToken: "0x4446Fc4eb47f2f6586f9fAAb68B3498F86C07521"
+    },
+    "kcc-testnet": {
+        routerAddr: "0xc5f442007e08e3b13C9f95fA22F2a2B9369d7C8C", //kuswap
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        nativeWrappedToken: "0xB296bAb2ED122a85977423b602DdF3527582A3DA"
+    }
 }

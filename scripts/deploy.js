@@ -14,11 +14,11 @@ let params = require("../parameters")
 async function main() {
   const [deployer] = await ethers.getSigners()
 
-  let DexForwarder 
+  let DexForwarder
 
   let net = await ethers.provider.getNetwork()
 
-  if(net.chainId == 420 || net.chainId == 10){ //optimism and optimism goerli
+  if (net.chainId == 420 || net.chainId == 10) { //optimism and optimism goerli
     DexForwarder = await ethers.getContractFactory("DexForwarderOptimism", deployer)
   } else {
     DexForwarder = await ethers.getContractFactory("DexForwarder", deployer)
@@ -27,10 +27,19 @@ async function main() {
   console.log("Deploying to network:", net.name, net.chainId)
   let routerAddress
   let trustedForwarder
+  let nativeWrappedToken
 
-  if (net.chainId == 43113) { 
+  if (net.chainId == 43113) {
     routerAddress = params.fuji.routerAddr
     trustedForwarder = params.fuji.trustedForwarder
+  } else if (net.chainId == 322) {
+    routerAddress = params["kcc-testnet"].routerAddr
+    trustedForwarder = params["kcc-testnet"].trustedForwarder
+    nativeWrappedToken = params["kcc-testnet"].nativeWrappedToken
+  } else if (net.chainId == 321) {
+    routerAddress = params.kcc.routerAddr
+    trustedForwarder = params.kcc.trustedForwarder
+    nativeWrappedToken = params.kcc.nativeWrappedToken
   } else {
     let networkName = net.name == "homestead" ? "ethereum" : net.name
     routerAddress = params[networkName].routerAddr
@@ -40,7 +49,7 @@ async function main() {
   console.log("Deploying Impl and Proxy")
 
   const dexForwarder = await upgrades.deployProxy(DexForwarder, [
-    routerAddress, trustedForwarder
+    routerAddress, trustedForwarder, nativeWrappedToken
   ])
 
   await dexForwarder.deployed()
@@ -53,7 +62,7 @@ async function main() {
   console.log("Waiting for confirmations...")
   await dexForwarder.deployTransaction.wait(12) //waiting for etherscan to catchup before verification
 
-  console.log("Verifing...")
+  console.log("Verifying...")
 
   await run("verify:verify", {
     address: implementation,
