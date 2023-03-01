@@ -76,7 +76,15 @@ module.exports = {
     "kcc-testnet": {
       url: process.env.RPC_KCC_TESTNET,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
-    }
+    },
+    cronos: {
+      url: process.env.RPC_CRONOS,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    cronosTestnet: {
+      url: process.env.RPC_CRONOS_TESTNET,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
   },
 
   solidity: "0.8.13",
@@ -100,7 +108,9 @@ module.exports = {
       goerli: process.env.ETHERSCAN_KEY,
       optimisticEthereum: process.env.OPTIMISM_KEY,
       "kcc-testnet": process.env.KCCSCAN_KEY,
-      kcc: process.env.KCCSCAN_KEY
+      kcc: process.env.KCCSCAN_KEY,
+      cronos: process.env.CRONOS_KEY,
+      cronosTestnet: process.env.CRONOS_KEY
     },
     customChains: [
       {
@@ -117,6 +127,22 @@ module.exports = {
         urls: {
           apiURL: "https://scan-testnet.kcc.network/api",
           browserURL: "https://scan-testnet.kcc.network"
+        }
+      },
+      {
+        network: "cronosTestnet",
+        chainId: 338,
+        urls: {
+          apiURL: "https://api-testnet.cronoscan.com/api",
+          browserURL: "https://testnet.cronoscan.com"
+        }
+      },
+      {
+        network: "cronos",
+        chainId: 25,
+        urls: {
+          apiURL: "https://api.cronoscan.com/api",
+          browserURL: "https://cronoscan.com"
         }
       }
     ]

@@ -43,3 +43,10 @@
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
 | Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://optimistic.etherscan.io/address/0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5) | [0xb3756cb11935921ae368654e4bd0e9ccca3308c3](https://goerli-optimism.etherscan.io/address/0xb3756cb11935921ae368654e4bd0e9ccca3308c3)
 | Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://optimistic.etherscan.io/address/0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5) | [0xE3559d04Cfd810306a1BF8F820e42e73c14901A3](https://goerli-optimism.etherscan.io/address/0xE3559d04Cfd810306a1BF8F820e42e73c14901A3#readProxyContract)
+
+#### Cronos
+
+| Name              | Mainnet                                                                             | Testnet
+|-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
+| Proxy Admin       | | [0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833](https://testnet.cronoscan.com/address/0x05d1bb9b99e82bd0408dd670ab85e4e29afbf833)
+| Forwarder         | [ | [0xc7963592D629ebc02C769167E0a47C5D6dbdd491](https://testnet.cronoscan.com/address/0xc7963592D629ebc02C769167E0a47C5D6dbdd491#readProxyContract)

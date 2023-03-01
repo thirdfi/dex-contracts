@@ -70,5 +70,17 @@ module.exports = {
         routerAddr: "0xc5f442007e08e3b13C9f95fA22F2a2B9369d7C8C", //kuswap
         trustedForwarder: "0x0000000000000000000000000000000000000000",
         nativeWrappedToken: "0xB296bAb2ED122a85977423b602DdF3527582A3DA"
+    },
+    cronosTestnet: {
+        routerAddr: "0xf564ef0034bb7d7cd84412275e1e51364d4d7734", //velodrome
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        Proxy: "",
+        nativeTokenAddress: "0x6a3173618859C7cd40fAF6921b5E9eB6A76f1fD4"
+    },
+    cronosMainnet: {
+        routerAddr: "0x145863Eb42Cf62847A6Ca784e6416C1682b1b2Ae",
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        Proxy: "",
+        nativeTokenAddress: "0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23",
     }
 }
