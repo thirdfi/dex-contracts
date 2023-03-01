@@ -85,6 +85,14 @@ module.exports = {
       url: process.env.RPC_CRONOS_TESTNET,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
     },
+    okc: {
+      url: process.env.RPC_OKC,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    okcTestnet: {
+      url: process.env.RPC_OKC_TESTNET,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    }
   },
 
   solidity: "0.8.13",
@@ -110,7 +118,8 @@ module.exports = {
       "kcc-testnet": process.env.KCCSCAN_KEY,
       kcc: process.env.KCCSCAN_KEY,
       cronos: process.env.CRONOS_KEY,
-      cronosTestnet: process.env.CRONOS_KEY
+      cronosTestnet: process.env.CRONOS_KEY,
+      okc: process.env.OKX_KEY
     },
     customChains: [
       {
