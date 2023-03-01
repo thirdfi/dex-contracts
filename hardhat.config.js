@@ -45,7 +45,7 @@ module.exports = {
       accounts: [`0x${process.env.PRIVATE_KEY}`]
     },
 
-    "arbitrum-goerli" : {
+    "arbitrum-goerli": {
       url: process.env.RPC_ARBITRUM_GOERLI,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
     },
@@ -69,6 +69,14 @@ module.exports = {
       url: process.env.RPC_OPTIMISM,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
     },
+    cronos: {
+      url: process.env.RPC_CRONOS,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    cronosTestnet: {
+      url: process.env.RPC_CRONOS_TESTNET,
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
   },
 
   solidity: "0.8.13",
@@ -90,7 +98,9 @@ module.exports = {
       "arbitrum-goerli": process.env.ARBISCAN_KEY,
       avalancheFujiTestnet: process.env.AVAX_KEY,
       goerli: process.env.ETHERSCAN_KEY,
-      optimisticEthereum: process.env.OPTIMISM_KEY
+      optimisticEthereum: process.env.OPTIMISM_KEY,
+      cronos: process.env.CRONOS_KEY,
+      cronosTestnet: process.env.CRONOS_KEY
     },
     customChains: [
       {
@@ -99,6 +109,22 @@ module.exports = {
         urls: {
           apiURL: "https://api-goerli.arbiscan.io/api",
           browserURL: "https://goerli.arbiscan.io"
+        }
+      },
+      {
+        network: "cronosTestnet",
+        chainId: 338,
+        urls: {
+          apiURL: "https://api-testnet.cronoscan.com/api",
+          browserURL: "https://testnet.cronoscan.com"
+        }
+      },
+      {
+        network: "cronos",
+        chainId: 25,
+        urls: {
+          apiURL: "https://api.cronoscan.com/api",
+          browserURL: "https://cronoscan.com"
         }
       }
     ]

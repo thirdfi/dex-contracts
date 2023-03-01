@@ -27,10 +27,19 @@ async function main() {
   console.log("Deploying to network:", net.name, net.chainId)
   let routerAddress
   let trustedForwarder
+  let nativeTokenAddress
 
   if (net.chainId == 43113) { 
     routerAddress = params.fuji.routerAddr
     trustedForwarder = params.fuji.trustedForwarder
+  } else if (net.chainId == 338) { //cronost testnet
+    routerAddress = params.cronosTestnet.routerAddr
+    trustedForwarder = params.cronosTestnet.trustedForwarder
+    nativeTokenAddress = params.cronosTestnet.nativeTokenAddress
+  } else if (net.chainId == 25) { //cronos mainnet
+    routerAddress = params.cronosMainnet.routerAddr
+    trustedForwarder = params.cronosMainnet.trustedForwarder
+    nativeTokenAddress = params.cronosMainnet.nativeTokenAddress
   } else {
     let networkName = net.name == "homestead" ? "ethereum" : net.name
     routerAddress = params[networkName].routerAddr
@@ -40,7 +49,7 @@ async function main() {
   console.log("Deploying Impl and Proxy")
 
   const dexForwarder = await upgrades.deployProxy(DexForwarder, [
-    routerAddress, trustedForwarder
+    routerAddress, trustedForwarder, nativeTokenAddress
   ])
 
   await dexForwarder.deployed()

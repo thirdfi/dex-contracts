@@ -61,4 +61,16 @@ module.exports = {
         trustedForwarder: "0xefba8a2a82ec1fb1273806174f5e28fbb917cf95",
         Proxy: "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
     },
+    cronosTestnet: {
+        routerAddr: "0xf564ef0034bb7d7cd84412275e1e51364d4d7734", //velodrome
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        Proxy: "",
+        nativeTokenAddress: "0x6a3173618859C7cd40fAF6921b5E9eB6A76f1fD4"
+    },
+    cronosMainnet: {
+        routerAddr: "0x145863Eb42Cf62847A6Ca784e6416C1682b1b2Ae",
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        Proxy: "",
+        nativeTokenAddress: "0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23",
+    }
 }
