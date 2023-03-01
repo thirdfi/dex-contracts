@@ -65,15 +65,17 @@ async function main() {
   console.log("Implementation", implementation)
   console.log("Proxy: ", dexForwarder.address)
 
-  console.log("Waiting for confirmations...")
-  await dexForwarder.deployTransaction.wait(12) //waiting for etherscan to catchup before verification
-
-  console.log("Verifing...")
-
-  await run("verify:verify", {
-    address: implementation,
-    constructorArguments: [],
-  });
+  if(net.chainId != 65 && net.chainId != 66) { //okc testnet and okc mainnet doesn't have etherscan like explorers
+    console.log("Waiting for confirmations...")
+    await dexForwarder.deployTransaction.wait(12) //waiting for etherscan to catchup before verification
+  
+    console.log("Verifing...")
+  
+    await run("verify:verify", {
+      address: implementation,
+      constructorArguments: [],
+    });
+  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

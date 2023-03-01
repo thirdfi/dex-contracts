@@ -62,10 +62,10 @@ module.exports = {
         Proxy: "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
     },
     okc: {
-        routerAddr: "", // Uniswap V2 Router
-        trustedForwarder: "",
+        routerAddr: "0xc97b81B8a38b9146010Df85f1Ac714aFE1554343", 
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
         proxy: "",
-        nativeToken: ""
+        nativeToken: "0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15"
     },
     okcTestnet: {
         routerAddr: "0x5233245E3256B845ff8249E87Eede5973Bc7A5c7", // Uniswap V2 Router
