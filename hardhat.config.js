@@ -100,7 +100,6 @@ module.exports = {
   mocha: {
     timeout: 70000000
   },
-
   etherscan: {
     apiKey: {
       polygon: process.env.POLYGONSCAN_KEY,
@@ -128,6 +127,14 @@ module.exports = {
         urls: {
           apiURL: "https://api-goerli.arbiscan.io/api",
           browserURL: "https://goerli.arbiscan.io"
+        }
+      },
+      {
+        network: "kcc",
+        chainId: 321,
+        urls: {
+          apiURL: `https://api.explorer.kcc.io/vipapi/kcs/contract/submitContractCode?apikey=${process.env.KCCSCAN_KEY}`,
+          browserURL: "https://explorer.kcc.io"
         }
       },
       {

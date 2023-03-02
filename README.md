@@ -58,3 +58,11 @@
 | Proxy Admin       |  | [0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833](https://www.oklink.com/en/okc-test/address/0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833)
 | Forwarder         |  | [0xc7963592D629ebc02C769167E0a47C5D6dbdd491](https://www.oklink.com/en/okc-test/address/0xc7963592D629ebc02C769167E0a47C5D6dbdd491)
 
+
+#### OKC
+
+| Name              | Mainnet                                                                             | Testnet
+|-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
+| Proxy Admin       |  |
+| Forwarder         | [0x277eA3B0af543cF539Ff85962Df7e45EDC3e22D1](https://scan.kcc.io/address/0x277eA3B0af543cF539Ff85962Df7e45EDC3e22D1) | [0x6889BD771740F818bF4e3cFD16fDDc472E085B43](https://scan-testnet.kcc.network/address/0x6889BD771740F818bF4e3cFD16fDDc472E085B43)
+
