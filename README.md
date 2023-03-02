@@ -55,14 +55,14 @@
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       |  | [0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833](https://www.oklink.com/en/okc-test/address/0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833)
-| Forwarder         |  | [0xc7963592D629ebc02C769167E0a47C5D6dbdd491](https://www.oklink.com/en/okc-test/address/0xc7963592D629ebc02C769167E0a47C5D6dbdd491)
+| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://www.oklink.com/okc/address/0x68b7b9d45d70496b9c0e449ad82c4fda3ad8afd5) | [0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833](https://www.oklink.com/en/okc-test/address/0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833)
+| Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://www.oklink.com/okc/address/0x981ae6155f8cf24f67e30ca8d90ab6faeb472ae5) | [0xc7963592D629ebc02C769167E0a47C5D6dbdd491](https://www.oklink.com/en/okc-test/address/0xc7963592D629ebc02C769167E0a47C5D6dbdd491)
 
 
 #### KCC
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       |  |
+| Proxy Admin       | [0x5C0dC59855a8BAf1928DB3d642d10892998b3a52](https://scan.kcc.io/address/0x5C0dC59855a8BAf1928DB3d642d10892998b3a52) |
 | Forwarder         | [0x277eA3B0af543cF539Ff85962Df7e45EDC3e22D1](https://scan.kcc.io/address/0x277eA3B0af543cF539Ff85962Df7e45EDC3e22D1) | [0x6889BD771740F818bF4e3cFD16fDDc472E085B43](https://scan-testnet.kcc.network/address/0x6889BD771740F818bF4e3cFD16fDDc472E085B43)
 
