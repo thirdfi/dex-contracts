@@ -48,8 +48,8 @@
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | | [0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833](https://testnet.cronoscan.com/address/0x05d1bb9b99e82bd0408dd670ab85e4e29afbf833)
-| Forwarder         | [ | [0xc7963592D629ebc02C769167E0a47C5D6dbdd491](https://testnet.cronoscan.com/address/0xc7963592D629ebc02C769167E0a47C5D6dbdd491#readProxyContract)
+| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://cronoscan.com/address/0x68b7b9d45d70496b9c0e449ad82c4fda3ad8afd5) | [0x05D1bb9B99E82bd0408dd670aB85E4e29AfbF833](https://testnet.cronoscan.com/address/0x05d1bb9b99e82bd0408dd670ab85e4e29afbf833)
+| Forwarder         | [0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5](https://cronoscan.com/address/0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5) | [0xc7963592D629ebc02C769167E0a47C5D6dbdd491](https://testnet.cronoscan.com/address/0xc7963592D629ebc02C769167E0a47C5D6dbdd491#readProxyContract)
 
 #### OKC
 
