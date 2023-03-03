@@ -1,4 +1,6 @@
-## Securo DeX integrated with Biconomy Forwarders
+## ThirdFi DeX Integration Contracts
+
+These contracts are used for simplifying the DeX smart contract interactions to improve the UX. 
 
 ### Contract Addresses
 
