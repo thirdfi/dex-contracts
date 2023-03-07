@@ -98,11 +98,11 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         tokenB.safeTransferFrom(_msgSender(), address(this), amountBDesired);
 
         if (tokenA.allowance(address(this), address(router)) < amountADesired) {
-            tokenA.safeApprove(address(router), type(uint256).max);
+            tokenA.approve(address(router), type(uint256).max);
         }
 
         if (tokenB.allowance(address(this), address(router)) < amountBDesired) {
-            tokenB.safeApprove(address(router), type(uint256).max);
+            tokenB.approve(address(router), type(uint256).max);
         }
 
         return _addLiquidity(tokenA, tokenB, amountADesired, amountBDesired, amountAMin, amountBMin, to, deadline);
@@ -155,7 +155,7 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         IERC20Upgradeable lpToken = IERC20Upgradeable(factory.getPair(address(tokenA), address(tokenB)));
 
         if(lpToken.allowance(address(this), address(router)) < liquidity) {
-            lpToken.safeApprove(address(router), type(uint256).max);
+            lpToken.approve(address(router), type(uint256).max);
         }
 
         lpToken.safeTransferFrom(_msgSender(), address(this), liquidity);
@@ -183,7 +183,7 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         tokenA.safeTransferFrom(_sender, address(this), amountA);
 
         if (tokenA.allowance(address(this), address(router)) < amountA/2) {
-            tokenA.safeApprove(address(router), type(uint256).max);
+            tokenA.approve(address(router), type(uint256).max);
         }
 
         //swap
@@ -193,7 +193,7 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         uint256[] memory amounts = router.swapExactTokensForTokens(amountA/2, minAmountB, path, address(this), block.timestamp);
 
         if (tokenB.allowance(address(this), address(router)) < amounts[1]) {
-            tokenB.safeApprove(address(router), type(uint256).max);
+            tokenB.approve(address(router), type(uint256).max);
         }
 
         (_amountA, _amountB, _liquidity) = _addLiquidity(tokenA, tokenB, amounts[0], amounts[1], amounts[0] * 95_00 / 100_00, 0, _sender, block.timestamp);
@@ -216,7 +216,7 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         uint256[] memory amounts = router.swapExactETHForTokens{value: msg.value/2}(minAmount, path, address(this), block.timestamp);
 
         if (token.allowance(address(this), address(router)) < amounts[1]) {
-            token.safeApprove(address(router), type(uint256).max);
+            token.approve(address(router), type(uint256).max);
         }
 
         (amountA, amountB, liquidity) = router.addLiquidityETH{value: amounts[0]}(address(token), amounts[1], amounts[1] * 95_00 / 100_00, amounts[0] * 95_00 / 100_00, _sender, block.timestamp);
@@ -241,8 +241,8 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         IERC20Upgradeable lpToken = IERC20Upgradeable(factory.getPair(address(tokenA), address(tokenB)));
         lpToken.safeTransferFrom(_msgSender(), address(this), lpAmount);
 
-        if(lpToken.allowance(address(this), address(router)) > lpAmount) {
-            lpToken.safeApprove(address(router), type(uint256).max);
+        if(lpToken.allowance(address(this), address(router)) < lpAmount) {
+            lpToken.approve(address(router), type(uint256).max);
         }
 
         (amountA, amountB) = router.removeLiquidityETH(
