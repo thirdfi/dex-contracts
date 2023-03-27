@@ -68,3 +68,10 @@ These contracts are used for simplifying the DeX smart contract interactions to 
 | Proxy Admin       | [0x5C0dC59855a8BAf1928DB3d642d10892998b3a52](https://scan.kcc.io/address/0x5C0dC59855a8BAf1928DB3d642d10892998b3a52) |
 | Forwarder         | [0x277eA3B0af543cF539Ff85962Df7e45EDC3e22D1](https://scan.kcc.io/address/0x277eA3B0af543cF539Ff85962Df7e45EDC3e22D1) | [0x6889BD771740F818bF4e3cFD16fDDc472E085B43](https://scan-testnet.kcc.network/address/0x6889BD771740F818bF4e3cFD16fDDc472E085B43)
 
+#### Conflux
+
+| Name              | Mainnet                                                                             | Testnet
+|-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
+| Proxy Admin       | TBA | TBA
+| Forwarder         | TBA | [0xaf4ecfed91cdd1380fbcb1bde751ecd617c1333e](https://evmtestnet.confluxscan.net/address/0xaf4ecfed91cdd1380fbcb1bde751ecd617c1333e)
+
