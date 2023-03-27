@@ -27,9 +27,12 @@
     "typechain": "^8.1.0"
   },
   "dependencies": {
+    "@confluxfans/contracts": "^0.3.2",
     "@opengsn/contracts": "^3.0.0-beta.1",
     "@openzeppelin/contracts-upgradeable": "^4.8.0-rc.1",
     "@openzeppelin/hardhat-upgrades": "^1.21.0",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "hardhat-conflux": "^0.1.1",
+    "js-conflux-sdk": "^2.1.9"
   }
 }

@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require('@openzeppelin/hardhat-upgrades');
 require("@nomiclabs/hardhat-etherscan");
+require('hardhat-conflux');
 require("dotenv").config()
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -92,6 +93,16 @@ module.exports = {
     okcTestnet: {
       url: process.env.RPC_OKC_TESTNET,
       accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
+    conflux: {
+      url: process.env.RPC_CONFLUX,
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      chainId: 1030,
+    },
+    confluxTestnet: {
+      url: process.env.RPC_CONFLUX,
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      chainId: 71,
     }
   },
 
@@ -118,7 +129,9 @@ module.exports = {
       kcc: process.env.KCCSCAN_KEY,
       cronos: process.env.CRONOS_KEY,
       cronosTestnet: process.env.CRONOS_KEY,
-      okc: process.env.OKX_KEY
+      okc: process.env.OKX_KEY,
+      conflux: process.env.CONFLUX_KEY,
+      confluxTestnet: "10f0dbeddc4f4d5db1ec68dbf3f3575c"
     },
     customChains: [
       {
@@ -159,6 +172,14 @@ module.exports = {
         urls: {
           apiURL: "https://api.cronoscan.com/api",
           browserURL: "https://cronoscan.com"
+        }
+      },
+      {
+        network: "confluxTestnet",
+        chainId: 71,
+        urls: {
+          apiURL: "https://evmapi-testnet.confluxscan.net/api",
+          browserURL: "https://evmtestnet.confluxscan.net"
         }
       }
     ]

@@ -94,5 +94,17 @@ module.exports = {
         trustedForwarder: "0x0000000000000000000000000000000000000000", //zero address
         proxy: "0xc7963592D629ebc02C769167E0a47C5D6dbdd491",
         nativeToken: "0x2219845942d28716c0f7c605765fabdca1a7d9e0"
+    },
+    conflux: {
+        routerAddr: "0x62b0873055bf896dd869e172119871ac24aea305",
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        Proxy: "TBA",
+        nativeToken: "0x14b2d3bc65e74dae1030eafd8ac30c533c976a9b"
+    },
+    confluxTestnet: {
+        routerAddr: "0x873789aaf553fd0b4252d0d2b72c6331c47aff2e", // Swappi Router
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        Proxy: "0xAF4eCFeD91cdD1380FbCb1bdE751ecd617c1333e",
+        nativeToken: "0x2ed3dddae5b2f321af0806181fbfa6d049be47d8"
     }
 }

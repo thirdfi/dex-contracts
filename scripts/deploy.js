@@ -24,6 +24,8 @@ async function main() {
     DexForwarder = await ethers.getContractFactory("DexForwarderAvalanche", deployer)
   } else if (net.chainId == 65 || net.chainId == 66) {
     DexForwarder = await ethers.getContractFactory("DexForwarderOKC", deployer)
+  } else if (net.chainId == 71 || net.chainId == 1030) {
+    DexForwarder = await ethers.getContractFactory("DexForwarderConflux", deployer)
   } else {
     DexForwarder = await ethers.getContractFactory("DexForwarder", deployer)
   }
@@ -32,7 +34,7 @@ async function main() {
   let routerAddress
   let trustedForwarder
   let nativeTokenAddress
-
+  let networkName
   if (net.chainId == 43113) {
     routerAddress = params.fuji.routerAddr
     trustedForwarder = params.fuji.trustedForwarder
@@ -61,8 +63,18 @@ async function main() {
     routerAddress = params.okc.routerAddr
     trustedForwarder = params.okc.trustedForwarder
     nativeTokenAddress = params.okc.nativeToken
+  } else if(net.chainId == 71) {
+    networkName = "conflux-testnet"
+    routerAddress = params.confluxTestnet.routerAddr // Conflux Testnet
+    trustedForwarder = params.confluxTestnet.trustedForwarder
+    nativeTokenAddress = params.confluxTestnet.nativeToken // Wrapped CFX
+  } else if(net.chainId == 1030) {
+    networkName = "conflux"
+    routerAddress = params.conflux.routerAddr // Conflux Mainnet
+    trustedForwarder = params.conflux.trustedForwarder
+    nativeTokenAddress = params.conflux.nativeToken // Wrapped CFX
   } else {
-    let networkName = net.name == "homestead" ? "ethereum" : net.name
+    networkName = net.name == "homestead" ? "ethereum" : net.name
     routerAddress = params[networkName].routerAddr
     trustedForwarder = params[networkName].trustedForwarder
     nativeToken = params[networkName].nativeToken
