@@ -80,13 +80,13 @@ module.exports = {
     cronosMainnet: {
         routerAddr: "0x145863Eb42Cf62847A6Ca784e6416C1682b1b2Ae",
         trustedForwarder: "0x0000000000000000000000000000000000000000",
-        Proxy: "",
+        Proxy: "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
         nativeTokenAddress: "0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23",
     },
     okc: {
         routerAddr: "0xc97b81B8a38b9146010Df85f1Ac714aFE1554343", 
         trustedForwarder: "0x0000000000000000000000000000000000000000",
-        proxy: "",
+        proxy: "0x981aE6155F8CF24F67e30CA8d90ab6FaEB472aE5",
         nativeToken: "0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15"
     },
     okcTestnet: {
