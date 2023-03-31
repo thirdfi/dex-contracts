@@ -72,6 +72,6 @@ These contracts are used for simplifying the DeX smart contract interactions to 
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | TBA | TBA
-| Forwarder         | TBA | [0xaf4ecfed91cdd1380fbcb1bde751ecd617c1333e](https://evmtestnet.confluxscan.net/address/0xaf4ecfed91cdd1380fbcb1bde751ecd617c1333e)
+| Proxy Admin       | [0x68b7b9D45D70496b9C0e449AD82c4Fda3ad8AfD5](https://evm.confluxscan.net/address/0x68b7b9d45d70496b9c0e449ad82c4fda3ad8afd5) | 
+| Forwarder         | [0x5c0dc59855a8baf1928db3d642d10892998b3a52](https://evm.confluxscan.net/address/0x5c0dc59855a8baf1928db3d642d10892998b3a52) | [0xaf4ecfed91cdd1380fbcb1bde751ecd617c1333e](https://evmtestnet.confluxscan.net/address/0xaf4ecfed91cdd1380fbcb1bde751ecd617c1333e)
 

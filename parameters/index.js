@@ -98,7 +98,7 @@ module.exports = {
     conflux: {
         routerAddr: "0x62b0873055bf896dd869e172119871ac24aea305",
         trustedForwarder: "0x0000000000000000000000000000000000000000",
-        Proxy: "TBA",
+        Proxy: "",
         nativeToken: "0x14b2d3bc65e74dae1030eafd8ac30c533c976a9b"
     },
     confluxTestnet: {
