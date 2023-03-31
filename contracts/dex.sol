@@ -241,7 +241,7 @@ contract DexForwarder is Initializable, OwnableUpgradeable {
         IERC20Upgradeable lpToken = IERC20Upgradeable(factory.getPair(address(tokenA), address(tokenB)));
         lpToken.safeTransferFrom(_msgSender(), address(this), lpAmount);
 
-        if(lpToken.allowance(address(this), address(router)) > lpAmount) {
+        if(lpToken.allowance(address(this), address(router)) < lpAmount) {
             lpToken.safeApprove(address(router), type(uint256).max);
         }
 
