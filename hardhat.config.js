@@ -100,7 +100,7 @@ module.exports = {
       chainId: 1030,
     },
     confluxTestnet: {
-      url: process.env.RPC_CONFLUX,
+      url: process.env.RPC_CONFLUX_TESTNET,
       accounts: [`0x${process.env.PRIVATE_KEY}`],
       chainId: 71,
     }
@@ -131,7 +131,7 @@ module.exports = {
       cronosTestnet: process.env.CRONOS_KEY,
       okc: process.env.OKX_KEY,
       conflux: process.env.CONFLUX_KEY,
-      confluxTestnet: "10f0dbeddc4f4d5db1ec68dbf3f3575c"
+      confluxTestnet: process.env.CONFLUX_KEY
     },
     customChains: [
       {
@@ -180,6 +180,14 @@ module.exports = {
         urls: {
           apiURL: "https://evmapi-testnet.confluxscan.net/api",
           browserURL: "https://evmtestnet.confluxscan.net"
+        }
+      },
+      {
+        network: "conflux",
+        chainId: 1030,
+        urls: {
+          apiURL: "https://evmapi.confluxscan.net/api",
+          browserURL: "https://evm.confluxscan.net"
         }
       }
     ]
