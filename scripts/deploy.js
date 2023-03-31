@@ -24,8 +24,6 @@ async function main() {
     DexForwarder = await ethers.getContractFactory("DexForwarderAvalanche", deployer)
   } else if (net.chainId == 65 || net.chainId == 66) {
     DexForwarder = await ethers.getContractFactory("DexForwarderOKC", deployer)
-  } else if (net.chainId == 71 || net.chainId == 1030) {
-    DexForwarder = await ethers.getContractFactory("DexForwarderConflux", deployer)
   } else {
     DexForwarder = await ethers.getContractFactory("DexForwarder", deployer)
   }

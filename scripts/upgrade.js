@@ -12,17 +12,27 @@ const main = async () => {
         DexForwarder = await ethers.getContractFactory("DexForwarderOptimism", deployer)
     } else if (net.chainId == 43113 || net.chainId == 43114) {
         DexForwarder = await ethers.getContractFactory("DexForwarderAvalanche", deployer)
-    }else {
+    } else {
         DexForwarder = await ethers.getContractFactory("DexForwarder", deployer)
     }
 
-    let proxyAddr
+    let proxyAddr;
+    let networkName;
     if (net.chainId == 43113) {
         proxyAddr = params.fuji.Proxy
     } else if (net.chainId === 43114) {
         proxyAddr = params.avalanche.Proxy
+    } else if(net.chainId == 1030) {
+        // Due to the name not found undefined from .getNetwork()
+        networkName = 'conflux';
+        proxyAddr = params[networkName].Proxy;
+        nativeToken = params[networkName].nativeToken;
+    } if(net.chainId == 71) {
+        networkName = "conflux-testnet"
+        proxyAddr = params[networkName].Proxy;
+        nativeToken = params[networkName].nativeToken;
     } else {
-        let networkName = net.name == "homestead" ? "ethereum" : net.name
+        networkName = net.name == "homestead" ? "ethereum" : net.name
         proxyAddr = params[networkName].Proxy
         nativeToken = params[networkName].nativeToken
     }
