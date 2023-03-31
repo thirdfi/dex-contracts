@@ -12,7 +12,9 @@ const main = async () => {
         DexForwarder = await ethers.getContractFactory("DexForwarderOptimism", deployer)
     } else if (net.chainId == 43113 || net.chainId == 43114) {
         DexForwarder = await ethers.getContractFactory("DexForwarderAvalanche", deployer)
-    }else {
+    } else if (net.chainId == 65 || net.chainId == 66) {
+        DexForwarder = await ethers.getContractFactory("DexForwarderOKC", deployer)
+    } else {
         DexForwarder = await ethers.getContractFactory("DexForwarder", deployer)
     }
 
@@ -21,6 +23,18 @@ const main = async () => {
         proxyAddr = params.fuji.Proxy
     } else if (net.chainId === 43114) {
         proxyAddr = params.avalanche.Proxy
+    } else if(net.chainId == 65) {
+        proxyAddr = params.okcTestnet.Proxy
+     }else if(net.chainId == 66) {
+        proxyAddr = params.okc.Proxy
+    } else if (net.chainId == 322) {
+        proxyAddr = params["kcc-testnet"].Proxy
+    } else if (net.chainId == 321) {
+        proxyAddr = params.kcc.Proxy
+    } else if (net.chainId == 338) {
+        proxyAddr = params.cronosTestnet.Proxy
+    } else if (net.chainId == 25) {
+        proxyAddr = params.cronosMainnet.Proxy
     } else {
         let networkName = net.name == "homestead" ? "ethereum" : net.name
         proxyAddr = params[networkName].Proxy
@@ -39,7 +53,7 @@ const main = async () => {
         {
             call: {
                 fn: "postUpgrade",
-        
+
             }
         }
     )
