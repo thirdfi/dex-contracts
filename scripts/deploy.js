@@ -71,6 +71,11 @@ async function main() {
     routerAddress = params.conflux.routerAddr // Conflux Mainnet
     trustedForwarder = params.conflux.trustedForwarder
     nativeTokenAddress = params.conflux.nativeToken // Wrapped CFX
+  } else if(net.chainId == 91002) {
+    networkName = "nautilus-triton" // Nautilus Testnet
+    routerAddress = params.nautilusTriton.routerAddr // Conflux Mainnet
+    trustedForwarder = params.nautilusTriton.trustedForwarder
+    nativeTokenAddress = params.nautilusTriton.nativeToken // Wrapped tZBC
   } else {
     networkName = net.name == "homestead" ? "ethereum" : net.name
     routerAddress = params[networkName].routerAddr
