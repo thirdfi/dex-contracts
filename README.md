@@ -79,5 +79,5 @@ These contracts are used for simplifying the DeX smart contract interactions to 
 
 | Name              | Mainnet                                                                             | Testnet
 |-------------------|-------------------------------------------------------------------------------------|-----------------------------------------
-| Proxy Admin       | TBA | NULL
+| Proxy Admin       | TBA | [0xF227A307f159B1AccC5dEdE0E1ffe01581a39EcD](https://triton.nautscan.com/triton/search/0xF227A307f159B1AccC5dEdE0E1ffe01581a39EcD)
 | Forwarder         | TBA | [0x4d0De12c0394F5A68A73779Ca319ACBc35F14aF2](https://triton.nautscan.com/triton/search/0x4d0De12c0394F5A68A73779Ca319ACBc35F14aF2)
