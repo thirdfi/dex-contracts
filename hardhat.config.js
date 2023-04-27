@@ -103,6 +103,11 @@ module.exports = {
       url: process.env.RPC_CONFLUX_TESTNET,
       accounts: [`0x${process.env.PRIVATE_KEY}`],
       chainId: 71,
+    },
+    NautilusTestnet: {
+      url: process.env.RPC_NAUTILUS_TESTNET,
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      chainId: 91002,
     }
   },
 
@@ -131,7 +136,8 @@ module.exports = {
       cronosTestnet: process.env.CRONOS_KEY,
       okc: process.env.OKX_KEY,
       conflux: process.env.CONFLUX_KEY,
-      confluxTestnet: process.env.CONFLUX_KEY
+      confluxTestnet: process.env.CONFLUX_KEY,
+      nautilusTriton: proccess.env.NAUTILUS_KEY
     },
     customChains: [
       {
@@ -188,6 +194,14 @@ module.exports = {
         urls: {
           apiURL: "https://evmapi.confluxscan.net/api",
           browserURL: "https://evm.confluxscan.net"
+        }
+      },
+      {
+        network: "nautilusTriton",
+        chainId: 91002,
+        urls: {
+          apiURL: "https://triton.api.nautchain.xyz",
+          browserURL: "https://triton.nautscan.com"
         }
       }
     ]
