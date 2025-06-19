@@ -106,5 +106,11 @@ module.exports = {
         trustedForwarder: "0x0000000000000000000000000000000000000000",
         Proxy: "0xAF4eCFeD91cdD1380FbCb1bdE751ecd617c1333e",
         nativeToken: "0x2ed3dddae5b2f321af0806181fbfa6d049be47d8"
+    },
+    nautilusTriton: {
+        routerAddr: "0x0b3265e4acdff5dfd455b8535a4ccf0570f5e33e", // PokeiSwap Router
+        trustedForwarder: "0x0000000000000000000000000000000000000000",
+        Proxy: "0x4d0De12c0394F5A68A73779Ca319ACBc35F14aF2", // deploy first
+        nativeToken: "0xa178e22ae6d720a4fda619aec392f95c5bc7caed" // WZBC
     }
 }
